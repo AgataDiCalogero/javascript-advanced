@@ -1,0 +1,59 @@
+/* Global variables */
+
+:root {
+  /* Navy & Gold Elegant Palette */
+  --navy-primary: #334155;      
+  --navy-secondary: #475569;    
+  --navy-soft: #64748b;         
+  
+  --gold-light: #d4af37;        
+  --gold-soft: #e6c766;        
+  --gold-whisper: #f5e6a3;      
+  
+  --warm-white: #fefefe;        
+  --cream-light: #faf9f7;       
+  --pearl-grey: #f1f5f9;        
+  
+  /* Semantic colors */
+  --text-primary: var(--navy-primary);
+  --text-secondary: var(--navy-soft);
+  --text-accent: var(--gold-light);
+  
+  --bg-main: linear-gradient(135deg, var(--warm-white) 0%, var(--cream-light) 30%, var(--pearl-grey) 100%);
+  --bg-card: var(--warm-white);
+  --bg-header: rgba(255, 255, 255, 0.95);
+  --bg-footer: var(--pearl-grey);
+  
+  --border-subtle: rgba(212, 175, 55, 0.15);
+  --border-soft: rgba(51, 65, 85, 0.1);
+  --border-gold: rgba(212, 175, 55, 0.3);
+
+  /* Typography */
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Spacing system - consistent and ordered */
+  --space-xs: 0.25rem;   /* 4px */
+  --space-sm: 0.5rem;    /* 8px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-xxl: 3rem;     /* 48px */
+
+  /* Layout spacing */
+  --container-padding: var(--space-md);
+  --section-gap: var(--space-lg);
+
+  /* Refined visual effects */
+  --shadow-whisper: 0 1px 3px rgba(51, 65, 85, 0.08);
+  --shadow-soft: 0 4px 16px rgba(51, 65, 85, 0.1);
+  --shadow-gold: 0 4px 16px rgba(212, 175, 55, 0.15);
+  --shadow-hover: 0 8px 24px rgba(51, 65, 85, 0.12);
+  
+  /* Border radius system */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+
+

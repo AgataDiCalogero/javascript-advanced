@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Hacker News aggregator built with JavaScript"
+    />
+    <title><%= htmlWebpackPlugin.options.title || 'JavaScript Advanced - Hacker News App' %></title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Hacker News App</h1>
+      <p>Latest news from Hacker News</p>
+    </header>
+
+    <main>
+      <div id="loader"></div>
+      <section id="news-container" aria-label="News list">
+        <!-- Space for news cards -->
+      </section>
+
+      <div class="button-container">
+        <button id="load-more" class="btn btn--primary" aria-label="Load more news">Load More</button>
+      </div>
+    </main>
+    <footer>
+      <p>
+        © 2025 – Start2Impact Project | <a href="#">Privacy</a> |
+        <a href="#">Cookie</a>
+      </p>
+    </footer>
+    <!-- Script automatically inserted by HtmlWebpackPlugin -->
+
+    <!-- Scroll to top button -->
+    <button id="scroll-to-top" class="btn btn--floating" aria-label="Scroll to top" hidden>
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </body>
+</html>

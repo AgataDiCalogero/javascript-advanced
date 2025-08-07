@@ -1,0 +1,20 @@
+{
+  "devDependencies": {
+    "@eslint/js": "^9.32.0",
+    "css-loader": "^7.1.2",
+    "eslint": "^9.32.0",
+    "globals": "^16.3.0",
+    "html-webpack-plugin": "^5.6.3",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.101.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve --open"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

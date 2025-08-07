@@ -1,0 +1,119 @@
+/* Main content area */
+
+main {
+  min-height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--space-md) var(--container-padding);
+  position: relative;
+  z-index: 1;
+}
+
+#news-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-md);
+  margin: 0 auto;
+  min-height: calc(100vh - 200px);
+  max-width: 1500px;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: var(--space-md) 0;
+  margin-top: var(--space-xl);
+}
+
+#news-container .news-card {
+  flex: 0 0 auto;
+  max-width: 480px;
+  min-width: 280px;
+}
+
+/* Media Queries - Mobile First Approach */
+
+/* Small mobile */
+@media (max-width: 480px) {
+  main {
+    max-width: 100%;
+    padding: var(--space-sm);
+  }
+
+  #news-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    padding: 0 var(--space-sm);
+  }
+
+  #news-container .news-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Mobile to small tablet */
+@media (min-width: 481px) and (max-width: 767px) {
+  main {
+    max-width: 100%;
+    padding: var(--space-md);
+  }
+
+  #news-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    align-items: center;
+    padding: 0 var(--space-sm);
+  }
+
+  #news-container .news-card {
+    flex: 0 0 auto;
+    max-width: 95%;
+    min-width: 280px;
+  }
+}
+
+/* Tablet and desktop layout */
+@media (min-width: 768px) {
+  main {
+    max-width: 1000px;
+    padding: var(--space-xxl) var(--space-lg);
+  }
+  
+  #news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-xl);
+  }
+
+  #news-container .news-card {
+    flex: 0 0 320px;
+    max-width: 320px;
+  }
+}
+
+/* Large desktop - 3 columns with flexbox centering */
+@media (min-width: 1200px) {
+  main {
+    max-width: 1200px;
+  }
+  
+  #news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-xl);
+    margin: 0 auto;
+  }
+  
+  #news-container .news-card {
+    flex: 0 0 320px;
+    max-width: 320px;
+  }
+}
+

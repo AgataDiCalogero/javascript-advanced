@@ -1,0 +1,28 @@
+/* Utilities */
+
+/* Hide elements */
+.hidden {
+  display: none !important;
+}
+
+/* Center text alignment */
+.text-center {
+  text-align: center;
+}
+
+/* Style for loading or error messages */
+.message {
+  padding: var(--space-md);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Message variants */
+.message.error {
+  color: #dc2626; /* Using standard error color */
+}
+
+.message.loading {
+  color: var(--text-accent);
+}
