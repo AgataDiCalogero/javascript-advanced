@@ -94,12 +94,12 @@ Le tecnologie sono state scelte per garantire modularità, sicurezza nell’acce
 <div align="center">
 
 ### 🖥️ Desktop View
-<img src="image.png" alt="Desktop view - Hacker News App with responsive grid layout" width="600">
+<img src="src/img/hacker-news-desktop.png" alt="Desktop view - Hacker News App with responsive grid layout" width="600">
 
 *Vista desktop: layout responsive a griglia con card organizzate e design navy/gold*
 
 ### 📱 Mobile View  
-<img src="image-1.png" alt="Mobile view - Hacker News App with vertical stack layout" width="300">
+<img src="src/img/hacker-news-mobile.png" alt="Mobile view - Hacker News App with vertical stack layout" width="300">
 
 *Vista mobile: layout verticale ottimizzato con pulsante scroll-to-top e design adattivo*
 
@@ -107,11 +107,9 @@ Le tecnologie sono state scelte per garantire modularità, sicurezza nell’acce
 
 ## Deploy
 La demo online è disponibile al seguente link:  
-[Link alla demo pubblica]
+**[🚀 Hacker News App - Live Demo](https://javascript-advanced-hacker-news-app.netlify.app)**
 
-La pubblicazione è avvenuta tramite Netlify.
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
-
+La pubblicazione è avvenuta tramite Netlify con deploy automatico da GitHub.
 
 ## Credits e riferimenti
 - API Hacker News: https://github.com/HackerNews/API
