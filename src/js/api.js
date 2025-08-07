@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // Configurazione base dell'istanza Axios
 const apiClient = axios.create({
-  baseURL: process.env.HACKER_NEWS_API_URL || 'https://hacker-news.firebaseio.com/v0',
+  baseURL: process.env.HACKER_NEWS_API_URL,
   timeout: 10000, // 10 secondi di timeout
   headers: {
     'Content-Type': 'application/json',

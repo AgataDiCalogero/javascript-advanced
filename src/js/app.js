@@ -7,7 +7,6 @@ import get from 'lodash/get';
 class NewsApp {
   constructor() {
     // Initial state
-    this.apiBase = "https://hacker-news.firebaseio.com/v0";
     this.newsPerPage = 10;
     this.currentPage = 0;
     this.newsIds = [];
