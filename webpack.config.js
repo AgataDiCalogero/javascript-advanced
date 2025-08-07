@@ -25,7 +25,12 @@ module.exports = {
       inject: 'body',
       title: 'JavaScript Advanced - Hacker News App',
     }),
-    new Dotenv(),
+    new Dotenv({
+      path: './.env',
+      safe: false,
+      systemvars: true,
+      silent: true
+    }),
   ],
   module: {
     rules: [

@@ -1,6 +1,5 @@
 /* API functions for Hacker News with Axios */
 import axios from 'axios';
-require('dotenv').config();
 
 // Configurazione base dell'istanza Axios
 const apiClient = axios.create({
