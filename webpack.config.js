@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   mode: 'development',
@@ -24,6 +25,7 @@ module.exports = {
       inject: 'body',
       title: 'JavaScript Advanced - Hacker News App',
     }),
+    new Dotenv(),
   ],
   module: {
     rules: [

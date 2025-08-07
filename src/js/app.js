@@ -140,7 +140,6 @@ class NewsApp {
       const endMsg = document.createElement("p");
       endMsg.id = "end-message";
       endMsg.className = "message";
-      endMsg.textContent = "No more news available.";
       this.loadMoreBtn.insertAdjacentElement("afterend", endMsg);
     }
   }

@@ -1,19 +1,54 @@
-/* API functions for Hacker News */
+/* API functions for Hacker News with Axios */
+import axios from 'axios';
 
-const apiBase = "https://hacker-news.firebaseio.com/v0";
+// Configurazione base dell'istanza Axios
+const apiClient = axios.create({
+  baseURL: process.env.HACKER_NEWS_API_URL || 'https://hacker-news.firebaseio.com/v0',
+  timeout: 10000, // 10 secondi di timeout
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+
+// Interceptor per la gestione degli errori
+apiClient.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    console.error('API Error:', error.message);
+    if (error.code === 'ECONNABORTED') {
+      console.error('Request timeout - please try again');
+    }
+    return Promise.reject(error);
+  }
+);
 
 /* Fetch of the latest news IDs */
 export const fetchNewsIds = async () => {
-  const response = await fetch(`${apiBase}/newstories.json`);
-  return response.json();
+  try {
+    const response = await apiClient.get('/newstories.json');
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching news IDs:', error);
+    throw error;
+  }
 };
 
 /* Fetch of a single news item by ID */
 export const fetchNewsItem = async (id) => {
-  const response = await fetch(`${apiBase}/item/${id}.json`);
-  return response.json();
+  try {
+    const response = await apiClient.get(`/item/${id}.json`);
+    return response.data;
+  } catch (error) {
+    console.error(`Error fetching news item ${id}:`, error);
+    throw error;
+  }
 };
 
 export const fetchNewsItems = async (ids) => {
-  return Promise.all(ids.map((id) => fetchNewsItem(id)));
+  try {
+    return Promise.all(ids.map((id) => fetchNewsItem(id)));
+  } catch (error) {
+    console.error('Error fetching multiple news items:', error);
+    throw error;
+  }
 };
